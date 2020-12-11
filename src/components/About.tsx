@@ -32,7 +32,7 @@ const About = () => {
         <Box className={classes.root} id="about">
             <Container maxWidth="xl">
                 <Typography className={classes.name} variant="h3">
-                    I am Rafael Feldfix
+                    Rafael Feldfix
                 </Typography>
 
                 <Typography
@@ -40,7 +40,7 @@ const About = () => {
                     className={classes.description}
                     variant="body2"
                 >
-                    I am an experienced web developer with strong knowledge of
+                  an experienced web developer with strong knowledge of
                     the MERN stack plus typescript
                 </Typography>
 

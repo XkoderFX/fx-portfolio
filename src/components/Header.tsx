@@ -20,8 +20,15 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
+        blur: {
+            backgroundColor: "white",
+        },
+
         root: {
             flexGrow: 1,
+            background: "rgba(51, 51, 255, .50)",
+            boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+            backdropFilter: "blur(20px)",
         },
         menuButton: {
             marginRight: theme.spacing(2),
@@ -46,7 +53,11 @@ const Header: React.FC<{ items: string[] }> = ({ items }) => {
     return (
         <div>
             <Container maxWidth="xl">
-                <AppBar position="fixed" color="primary">
+                <AppBar
+                    className={classes.root}
+                    position="fixed"
+                    color="primary"
+                >
                     <Toolbar className={classes.root}>
                         <IconButton
                             onClick={toggleMenu}
