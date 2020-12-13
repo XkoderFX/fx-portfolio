@@ -41,6 +41,7 @@ const Skills = () => {
                     "javascript",
                     "git",
                     "github",
+                    "material ui",
                 ].map((skill, index) => (
                     <Chip key={index} clickable color="primary" label={skill} />
                 ))}
