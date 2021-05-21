@@ -1,4 +1,4 @@
-import { Box, Divider } from '@material-ui/core';
+import { NoSsr } from '@material-ui/core';
 import React from 'react';
 import About from '../components/About';
 import Contact from '../components/Contact';
@@ -8,11 +8,12 @@ import Header from '../components/Header';
 import BottomDivider from '../components/shared/BottomDivider';
 import Skills from '../components/Skills';
 import { educations } from '../data/education';
+import { skills } from '../data/skils';
 import works from '../data/works';
 
 const App = () => {
     return (
-        <>
+        <NoSsr>
             <Header
                 items={[
                     'about',
@@ -25,14 +26,14 @@ const App = () => {
 
             <About />
             <BottomDivider />
-            <Skills />
+            <Skills skills={skills} />
             <BottomDivider />
             <Experience works={works} />
             <BottomDivider />
             <Education educations={educations} />
             <BottomDivider />
             <Contact />
-        </>
+        </NoSsr>
     );
 };
 

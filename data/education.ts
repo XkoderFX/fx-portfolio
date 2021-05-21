@@ -34,4 +34,16 @@ export const educations: EducationData[] = [
             },
         ],
     },
+
+    {
+        kind: 'certificate',
+        organization: 'Zero To Mastery',
+        title: 'ZTM, Complete React Native - certification',
+        actions: [
+            {
+                text: 'certificate',
+                url: 'https://www.udemy.com/certificate/UC-3d35b455-e0ff-4dbe-8e23-4cb0aeb2bac9/',
+            },
+        ],
+    },
 ];

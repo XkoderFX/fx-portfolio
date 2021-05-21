@@ -6,22 +6,22 @@ import {
     makeStyles,
     Theme,
     Typography,
-} from "@material-ui/core";
-import React from "react";
-import Definition from "./shared/Definition";
+} from '@material-ui/core';
+import React from 'react';
+import Definition from './shared/Definition';
 
 const useStyles = makeStyles((theme: Theme) => ({
     root: {
-        marginTop: "64px",
+        marginTop: '64px',
     },
     name: {
         paddingTop: theme.spacing(3),
-        fontSize: "36px",
+        fontSize: '36px',
     },
     description: {
         paddingTop: theme.spacing(3),
         color: theme.palette.grey[700],
-        fontSize: "16px",
+        fontSize: '16px',
     },
 }));
 
@@ -40,8 +40,8 @@ const About = () => {
                     className={classes.description}
                     variant="body2"
                 >
-                  an experienced web developer with strong knowledge of
-                    the MERN stack plus typescript
+                    an experienced web developer with strong knowledge of the
+                    MERN stack plus typescript and nextjs
                 </Typography>
 
                 <Definition term="phone" value="0549091616" />

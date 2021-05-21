@@ -5,20 +5,20 @@ import {
     makeStyles,
     Theme,
     Typography,
-} from "@material-ui/core";
-import React from "react";
-import { Work } from "../data/works";
-import WorkCard from "./shared/WorkCard";
+} from '@material-ui/core';
+import React from 'react';
+import { Work } from '../data/works';
+import WorkCard from './shared/WorkCard';
 
 const useStyles = makeStyles((theme: Theme) => ({
     title: {
         paddingTop: theme.spacing(3),
-        fontSize: "24px",
+        fontSize: '24px',
     },
     description: {
         paddingTop: theme.spacing(3),
         color: theme.palette.grey[700],
-        fontSize: "16px",
+        fontSize: '16px',
     },
 }));
 
@@ -31,7 +31,7 @@ const Experience: React.FC<{ works: Work[] }> = ({ works }) => {
             </Typography>
             <Grid container spacing={4}>
                 {works.map((work, index) => (
-                    <Grid item xs={12} lg={4}>
+                    <Grid key={index + Date.now()} item xs={12} lg={4}>
                         <Box>
                             <WorkCard
                                 topinfo={work.topinfo}

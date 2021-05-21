@@ -1,6 +1,5 @@
 import {
     AppBar,
-    Button,
     Container,
     createStyles,
     Drawer,
@@ -10,7 +9,6 @@ import {
     ListItem,
     ListItemText,
     makeStyles,
-    Paper,
     Theme,
     Toolbar,
     Typography,

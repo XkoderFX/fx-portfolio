@@ -5,22 +5,26 @@ import {
     makeStyles,
     Theme,
     Typography,
-} from "@material-ui/core";
-import React from "react";
+} from '@material-ui/core';
+import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) => ({
     title: {
         paddingTop: theme.spacing(3),
-        fontSize: "24px",
+        fontSize: '24px',
     },
     skills: {
-        "& > *": {
+        '& > *': {
             margin: theme.spacing(0.5),
         },
     },
 }));
 
-const Skills = () => {
+interface SkillsProps {
+    skills: string[];
+}
+
+const Skills: React.FC<SkillsProps> = ({ skills }) => {
     const classes = useStyles();
 
     return (
@@ -30,19 +34,7 @@ const Skills = () => {
             </Typography>
 
             <Box className={classes.skills}>
-                {[
-                    "nodeJS",
-                    "reactJS",
-                    "express",
-                    "mongoDB",
-                    "typescript",
-                    "html",
-                    "css",
-                    "javascript",
-                    "git",
-                    "github",
-                    "material ui",
-                ].map((skill, index) => (
+                {skills.map((skill, index) => (
                     <Chip key={index} clickable color="primary" label={skill} />
                 ))}
             </Box>
