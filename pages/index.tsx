@@ -1,15 +1,13 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { ThemeProvider } from '@material-ui/core';
+import Link from 'next/link';
+import React from 'react';
+import theme from '../theme/theme';
+import App from './App';
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+    <ThemeProvider theme={theme}>
+        <App></App>
+    </ThemeProvider>
+);
 
-export default IndexPage
+export default IndexPage;
